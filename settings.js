@@ -6,10 +6,7 @@ const {
    spanyol
 } = require(`./language`)
 
-//sebagian panel gk support opena ai jadi mungkin apikey lu bakalan di blokir
-//klo misalkan pada saat memakai fitur ai, terus dapat email dari open si, itu berarti website tempat lu install bot gk support ai
 global.OpenAIKey = "YOUR_KEY" //login to https://platform.openai.com/account/api-keys to get apikey
-
 // Website Api (jgn di ganti tomlol)
 global.APIs = {
    alfa: 'https://api.zeeoneofc.my.id', //apabila link api eror, segera laporkan ke owner
@@ -21,7 +18,7 @@ global.APIKeys = {
    'https://api.zeeoneofc.my.id': 'V12', // 👉 login https://api.zeeoneofc.my.id to get apikey
 }
 global.sewabotnya = `
-edit sewabot di file settings.js line 24
+edit sewabot di file settings.js line 19
 `
 // setting 
 global.firtsChat = true //send firts message to new user
@@ -29,46 +26,49 @@ global.autoread = true // auto read message
 global.antidelete = false // anti delete
 global.antiviewonce = true // anti view once
 global.autobio = false //auto ganti bio
-global.anticall = true //anti call, jika true maka org yg nelpon bot auto di blokir
+global.anticall = true //anti call 
 global.userRegister = false
 global.autoblok212 = false //ubah jadi true biar nmr 212 di blok sama bot
 global.autolevelup = true
-global.autowelcome = true //auto welcome msg all group
-global.autogoodbye = true //auto goodbye msg all group
-global.groupOnly = false //bot hanya bisa di gunakan dalam grup jika true
+global.groupOnly = false //bot hanya bisa di gunakan dalam grup
 
 //language
 //Available in indonesia , english & spanyol 
 //You can request others language 
-global.language = indonesia //change indonesia to english if you don't understand the language used by the bot
+global.language = english //change indonesia to english if you don't understand the language used by the bot
 //global.language = english // use this for English language
 //global.language = spanyol // use this for Spanyol language
 
 // Other
 // Other
-global.botname = "Alphabot-Mdོ" //namabot kalian
-global.ownername = "ᴹᴿ᭄ ZeeoneOfcོ ×፝֟͜×" //nama kalian
-global.myweb = "https://s.id/zeeoneofc" //bebas asal jan hapus
-global.youtube = "https://youtube.com/c/@ZeeoneOfc" //bebas asal jan hapus
-global.myweb2 = "https://s.id/zeeoneofc" //bebas
-global.email = "zeeoneofc@gmail.com" //bebas
-global.region = "Indonesia" //bebas
+global.botname = "HBWABot" //namabot kalian
+global.ownername = "Herbert Suantak" //nama kalian
+global.myweb = "https://herbert70.blogspot.com" //bebas asal jan hapus
+global.youtube = "https://youtube.com/c/HBSuantakOfficialChannel" //bebas asal jan hapus
+global.myweb2 = "herbert70.blogspot.com" //bebas
+global.fmwa1 = "https://herbert70.blogspot.com/2022/10/whatsapp.html" //
+global.fmwa2 = "https://herbert70.blogspot.com/2022/10/fmwhatsapp.html" //
+global.gbwa1 = "https://herbert70.blogspot.com/2022/04/download-gbwhatsapp-last-version-update.html?m=1" //
+global.gbwa2 = "https://herbert70.blogspot.com/2022/12/app-name-gbwhatsapp-pro-version-17.html?m=1" //
+global.yowa = "https://herbert70.blogspot.com/2022/10/yowhatsapp.html" //
+global.email = "herberthmar20@gmail.com" //bebas
+global.region = "India" //bebas
 global.timezone = 'Asia/Jakarta' //  timezone wib
-global.premium = ['62887435047326'] //premium user
-global.owner = ["62887435047326", "62821931157232"] //ganti agar fitur owner bisa di gunakan
-global.ownernomer = "62887435047326" // nomor wa kalian
-global.ownernomerr = "+"+ownernomer //nmr wa kalian
+global.premium = ['918416093656'] //premium user
+global.owner = ["918416093656", "919378043489"] //ganti agar fitur owner bisa di gunakan
+global.ownernomer = "918416093656" // nomor wa kalian
+global.ownernomerr = "919378043489"+ownernomer //nmr wa kalian
 global.thumbnail = "./image/lol.jpg" // ini lol.jpg adalah nama foto di folder image. untuk foto bot
 global.donasi = "./image/donasi.jpg" // foto donasi di folder image
 global.background_welcome = "https://telegra.ph/file/edca4b513ddf29fd52c0e.jpg" // maks size 30kb, agar welcome image nya tdk delay
 global.thumbGif = 'https://telegra.ph/file/e90bef3779d3c5812a5d1.mp4'
-global.packname = '© ' + botname //sticker wm ubah
-global.author = 'Created By ' + ownername //sticker wm ganti nama kalian
+global.packname = 'Siamted by' //sticker wm ubah
+global.author = 'HBWABot' //sticker wm ganti nama kalian
 global.sessionName = 'session'
 //type menu for menu
 global.typemenu = 'templateImage' //
 //type menu for downloadmenu, animemenu, etc
-global.typemenu2 = 'image' //
+global.typemenu2 = 'templateImage' //
 global.multiplier = 69
 global.limitawal = {
    premium: "Infinity", //unlimited
@@ -124,6 +124,84 @@ global.buttonDefault2 = [{
    quickReplyButton: {
       displayText: '🎁 Donasi 🎁',
       id: '.donasi'
+   }
+}]
+global.buttonDefault5 = [{
+   urlButton: {
+      displayText: 'WhatsApp +',
+      url: fmwa1
+   }
+}, {
+   urlButton: {
+      displayText: 'FMWhatsApp',
+      url: fmwa2
+   }
+}, {
+   quickReplyButton: {
+      displayText: 'GBWhatsApp',
+      id: '.gb'
+   }
+}, {
+   quickReplyButton: {
+      displayText: 'YOWhatsApp',
+      id: '.yo'
+   }
+}, {
+   quickReplyButton: {
+      displayText: 'FMWhatsApp',
+      id: '.fm'
+   }
+}]
+global.buttonDefault6 = [{
+   urlButton: {
+      displayText: 'GBWhatsApp',
+      url: gbwa1
+   }
+}, {
+   urlButton: {
+      displayText: 'GBWhatsApp Pro',
+      url: gbwa2
+   }
+}, {
+   quickReplyButton: {
+      displayText: 'GBWhatsApp',
+      id: '.gb'
+   }
+}, {
+   quickReplyButton: {
+      displayText: 'YOWhatsApp',
+      id: '.yo'
+   }
+}, {
+   quickReplyButton: {
+      displayText: 'FMWhatsApp',
+      id: '.fm'
+   }
+}]
+global.buttonDefault7 = [{
+   urlButton: {
+      displayText: 'YOWhatsApp',
+      url: yowa
+   }
+}, {
+   urlButton: {
+      displayText: 'HBMods Apk Store',
+      url: myweb
+   }
+}, {
+   quickReplyButton: {
+      displayText: 'GBWhatsApp',
+      id: '.gb'
+   }
+}, {
+   quickReplyButton: {
+      displayText: 'YOWhatsApp',
+      id: '.yo'
+   }
+}, {
+   quickReplyButton: {
+      displayText: 'FMWhatsApp',
+      id: '.fm'
    }
 }]
 global.buttonDefault3 = [{
@@ -282,20 +360,20 @@ global.fluming = 'https://www6.flamingtext.com/net-fu/proxy_form.cgi?&imageoutpu
 global.flarun = 'https://www6.flamingtext.com/net-fu/proxy_form.cgi?&imageoutput=true&script=runner-logo&doScale=true&scaleWidth=800&scaleHeight=500&fontsize=100&text='
 global.flasmurf = 'https://www6.flamingtext.com/net-fu/proxy_form.cgi?&imageoutput=true&script=smurfs-logo&doScale=true&scaleWidth=800&scaleHeight=500&fontsize=100&text='
 
-global.prefa = ['', '!', '.', '🐦', '🐤', '🗿']
+global.prefa = ['/', '!', '.', '🐦', '🐤', '']
 global.sp = '⭔'
 global.mess = {
-   sukses: '🤗Done, Oke Desu~',
-   admin: 'Perintah Ini Hanya Bisa Digunakan Oleh Admin !',
-   botAdmin: 'Perintah Ini Hanya Bisa Digunakan Ketika Bot Menjadi Admin !',
-   owner: 'Perintah Ini Hanya Bisa Digunakan Oleh Owner !',
-   group: 'Perintah Ini Hanya Bisa Digunakan Di Group !',
-   private: 'Perintah Ini Hanya Bisa Digunakan Di Private !',
-   bot: 'Fitur Khusus Pengguna Nomor Bot',
-   errtoimg: 'Maaf Saat Ini Belum Support Sticker Gif !',
-   wait: '⏳ Sedang Di Proses',
-   lockCmd: 'Fitur Tidak Diaktifkan Oleh Owner!',
-   example1: 'Selamat Datang @user Di Group @subject Jangan Lupa Baca Rules @desc\n\nNote :\n1. @user (Mention User Join)\n2. @bio (Get Bio User Join)\n3. @tanggal (Date Now)\n4. @desc (Get Description Group)\n5. @subject (Group Name)'
+   sukses: '🤗Kha le...',
+   admin: 'He cmd hi admin te chuh hman the tura siam a ni !',
+   botAdmin: 'Admin ah in mi dah hunah chauh hman thei a ni ang !',
+   owner: 'He cmd hi bot owner chauh hman thei tura siam a ni!',
+   group: 'He cmd hi group ah chauh hman thei tura siam a ni!',
+   private: 'He cmd hi private chat wu chauh hman thei a ni!',
+   bot: 'He features hi bot te chauh hman thei tura siam a ni',
+   errtoimg: 'Sorry, Sticker che thei siam thei a ni rih lo !',
+   wait: '⏳ Nghak lawk rawh....',
+   lockCmd: 'He Feature hi Owner in a active lo!',
+   example1: 'Hi @user he @subject group ah hian kan lo lawm a che Dont forget to read the rules @desc\n\nNote :\n1. @user (Mention User Join)\n2. @bio (Get Bio User Join)\n3. @tanggal (Date Now)\n4. @desc (Get Description Group)\n5. @subject (Group Name)'
 }
 
 let file = require.resolve(__filename)
